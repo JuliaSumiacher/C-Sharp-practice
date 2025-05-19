@@ -20,12 +20,19 @@ namespace WebAPI.Data
             return _context.Clases.Find(id);
         }
 
-        public Clase Insert(Clase clase)
+        public Clase? Insert(Clase clase)
         {
             _context.Clases.Add(clase);
             _context.SaveChanges();
             var claseExtraida = _context.Clases.FirstOrDefault(x => x.Name == clase.Name);
             return claseExtraida;
+        }
+
+        public Clase? Update(Clase clase)
+        {
+            _context.Clases.Update(clase);
+            _context.SaveChanges();
+            return clase;
         }
 
     }

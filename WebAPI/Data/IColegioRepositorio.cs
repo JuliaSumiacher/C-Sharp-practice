@@ -6,7 +6,8 @@ namespace WebAPI.Data
     {
         List<Colegio> GetAll();
         Colegio? GetById(int id);
-        Colegio Insert(Colegio colegio);
+        Colegio? Insert(Colegio colegio);
+        Colegio? Update(Colegio colegio);
     }
 }
 

@@ -29,4 +29,18 @@ namespace WebAPI.Services
             return colegioInserter;
 
         }
+
+        public Colegio? Update(int id, ColegioUpdateDTO colegio)
+        {
+            var colegioExistente = _colegioRepositorio.GetById(id);
+            if (colegioExistente == null)
+            {
+                return null;
+            }
+
+            colegioExistente.Name = colegio.Name;
+
+            return _colegioRepositorio.Update(colegioExistente);
+        }
+    }
 }

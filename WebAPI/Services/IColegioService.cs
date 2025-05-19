@@ -8,6 +8,7 @@ namespace WebAPI.Services
         List<Colegio> GetAll();
         Colegio? GetById(int Id);
         Colegio? Insert(ColegioInsertDTO colegio);
+        Colegio? Update(int id, ColegioUpdateDTO colegio);
     }
 }
 

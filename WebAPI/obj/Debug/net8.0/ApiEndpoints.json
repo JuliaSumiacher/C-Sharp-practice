@@ -18,8 +18,29 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "DTO",
-        "Type": "System.Object",
+        "Name": "alumno",
+        "Type": "WebAPI.DTO.AlumnoInsertDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.AlumnoController",
+    "Method": "Update",
+    "RelativePath": "api/Alumno/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "alumno",
+        "Type": "WebAPI.DTO.AlumnoUpdateDTO",
         "IsRequired": true
       }
     ],
@@ -60,8 +81,29 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "DTO",
-        "Type": "System.Object",
+        "Name": "clase",
+        "Type": "WebAPI.DTO.ClaseInsertDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.ClaseController",
+    "Method": "Update",
+    "RelativePath": "api/Clase/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "clase",
+        "Type": "WebAPI.DTO.ClaseUpdateDTO",
         "IsRequired": true
       }
     ],
@@ -102,8 +144,29 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "DTO",
-        "Type": "System.Object",
+        "Name": "colegio",
+        "Type": "WebAPI.DTO.ColegioInsertDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.ColegioController",
+    "Method": "Update",
+    "RelativePath": "api/Colegio/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "colegio",
+        "Type": "WebAPI.DTO.ColegioUpdateDTO",
         "IsRequired": true
       }
     ],
@@ -146,6 +209,27 @@
       {
         "Name": "profesor",
         "Type": "WebAPI.DTO.ProfesorInsertDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.ProfesorController",
+    "Method": "Update",
+    "RelativePath": "api/Profesor/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "profesor",
+        "Type": "WebAPI.DTO.ProfesorUpdateDTO",
         "IsRequired": true
       }
     ],

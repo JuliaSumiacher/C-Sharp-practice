@@ -8,5 +8,6 @@ namespace WebAPI.Services
         List<Clase> GetAll();
         Clase? GetById(int Id);
         Clase? Insert(ClaseInsertDTO clase);
+        Clase? Update(int id, ClaseUpdateDTO clase);
     }
 }

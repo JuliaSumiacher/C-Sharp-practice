@@ -29,5 +29,17 @@ namespace WebAPI.Services
             return profesorInserter;
 
         }
+        public Profesor? Update(int id, ProfesorUpdateDTO profesor)
+        {
+            var profesorExistente = _profesorRepositorio.GetById(id);
+            if (profesorExistente == null)
+            {
+                return null;
+            }
+
+            profesorExistente.Name = profesor.Name;
+
+            return _profesorRepositorio.Update(profesorExistente);
+        }
     }
 }

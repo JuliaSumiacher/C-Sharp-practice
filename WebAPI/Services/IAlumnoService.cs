@@ -8,5 +8,7 @@ namespace WebAPI.Services
         List<Alumno> GetAll();
         Alumno? GetById(int Id);
         Alumno? Insert(AlumnoInsertDTO alumno);
+        Alumno? Update(int id, AlumnoUpdateDTO alumno);
+
     }
 }

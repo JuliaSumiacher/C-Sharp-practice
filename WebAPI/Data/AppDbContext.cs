@@ -12,7 +12,6 @@ namespace WebAPI.Data
         public DbSet<Clase> Clases { get; set; }
         public DbSet<Profesor> Profesores { get; set; }
         public DbSet<Alumno> Alumnos { get; set; }
-        public object Colegio { get; internal set; }
     }
 }
 

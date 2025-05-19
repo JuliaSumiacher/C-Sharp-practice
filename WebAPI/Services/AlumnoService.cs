@@ -29,5 +29,19 @@ namespace WebAPI.Services
             return alumnoInserter;
 
         }
+        public Alumno? Update(int id, AlumnoUpdateDTO alumno)
+        {
+            var alumnoExistente = _alumnoRepositorio.GetById(id);
+            if (alumnoExistente == null)
+            {
+                return null;
+            }
+
+            alumnoExistente.Name = alumno.Name;
+
+            return _alumnoRepositorio.Update(alumnoExistente);
+        }
+
+
     }
 }

@@ -34,5 +34,12 @@ namespace WebAPI.Controllers
             var result = _ProfesorService.Insert(profesor);
             return Ok(result);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] ProfesorUpdateDTO profesor)
+        {
+            var result = _ProfesorService.Update(id, profesor);
+            return Ok(result);
+        }
     }
 }

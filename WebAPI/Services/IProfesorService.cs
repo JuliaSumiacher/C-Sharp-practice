@@ -8,6 +8,7 @@ namespace WebAPI.Services
         List<Profesor> GetAll();
         Profesor? GetById(int Id);
         Profesor? Insert(ProfesorInsertDTO profesor);
+        Profesor? Update(int id, ProfesorUpdateDTO profesor);
     }
 }
 

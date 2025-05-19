@@ -19,12 +19,19 @@ namespace WebAPI.Data
         {
             return _context.Colegios.Find(id);
         }
-        public Colegio Insert(Colegio colegio)
+        public Colegio? Insert(Colegio colegio)
         {
             _context.Colegios.Add(colegio);
             _context.SaveChanges();
             var colegioExtraido = _context.Colegios.FirstOrDefault(x => x.Name == colegio.Name);
             return colegioExtraido;
+        }
+
+        public Colegio? Update(Colegio colegio)
+        {
+            _context.Colegios.Update(colegio);
+            _context.SaveChanges();
+            return colegio;
         }
     }
 }

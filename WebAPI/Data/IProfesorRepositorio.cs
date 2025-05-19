@@ -6,6 +6,7 @@ namespace WebAPI.Data
     {
         List<Profesor> GetAll();
         Profesor? GetById(int id);
-        Profesor Insert(Profesor profesor);
+        Profesor? Insert(Profesor profesor);
+        Profesor? Update(Profesor profesor);
     }
 }

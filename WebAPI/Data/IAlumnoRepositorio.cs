@@ -6,7 +6,8 @@ namespace WebAPI.Data
     {
         List<Alumno> GetAll();
         Alumno? GetById(int id);
-        Alumno Insert(Alumno alumno);
+        Alumno? Insert(Alumno alumno);
+        Alumno? Update(Alumno alumno);
 
     }
 }

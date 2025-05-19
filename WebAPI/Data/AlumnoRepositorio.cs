@@ -27,6 +27,12 @@ namespace WebAPI.Data
             var alumnoExtraido = _context.Alumnos.FirstOrDefault(x => x.Name == alumno.Name);
             return alumnoExtraido;
         }
+        public Alumno? Update(Alumno alumno)
+        {
+            _context.Alumnos.Update(alumno);
+            _context.SaveChanges();
+            return alumno;
+        }
 
     }
 }

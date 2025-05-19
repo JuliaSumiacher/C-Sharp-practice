@@ -26,8 +26,25 @@ namespace WebAPI.Services
             var claseAInsertar = new Clase();
             claseAInsertar.Id = clase.Id;
             claseAInsertar.Name = clase.Name;
+            claseAInsertar.ColegioId = clase.ColegioId;
+            claseAInsertar.ProfesorId = clase.ProfesorId;
             var claseInserter = _claseRepositorio.Insert(claseAInsertar);
             return claseInserter;
+        }
+
+        public Clase? Update(int id, ClaseUpdateDTO clase)
+        {
+            var claseExistente = _claseRepositorio.GetById(id);
+            if (claseExistente == null)
+            {
+                return null;
+            }
+
+            claseExistente.Name = clase.Name;
+            //claseExistente.ColegioId = clase.ColegioId;
+            //claseExistente.ProfesorId = clase.ProfesorId;
+
+            return _claseRepositorio.Update(claseExistente);
         }
     }
 }

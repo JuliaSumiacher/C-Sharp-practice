@@ -6,7 +6,8 @@ namespace WebAPI.Data
     {
         List<Clase> GetAll();
         Clase? GetById(int id);
-        Clase Insert(Clase clase);
+        Clase? Insert(Clase clase);
+        Clase? Update(Clase clase);
 
     }
 }

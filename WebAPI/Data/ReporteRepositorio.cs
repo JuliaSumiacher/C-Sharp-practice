@@ -17,10 +17,10 @@ namespace WebAPI.Data
             var resultado = _context.Colegios
                 .Join(_context.Clases,
                       colegio => colegio.Id,
-                      clase => clase.IdColegio,
+                      clase => clase.ColegioId,
                       (colegio, clase) => new { colegio, clase })
                 .Join(_context.Profesores,
-                      cc => cc.clase.IdProfesor,
+                      cc => cc.clase.ProfesorId,
                       profesor => profesor.Id,
                       (cc, profesor) => new
                       {
