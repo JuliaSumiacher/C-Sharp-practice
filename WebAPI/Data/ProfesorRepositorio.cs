@@ -20,7 +20,7 @@ namespace WebAPI.Data
             return _context.Profesores.Find(id);
         }
 
-        public Profesor? Insert(Profesor profesor)
+        public Profesor Insert(Profesor profesor)
         {
             _context.Profesores.Add(profesor);
             _context.SaveChanges();

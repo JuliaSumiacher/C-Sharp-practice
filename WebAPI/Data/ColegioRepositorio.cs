@@ -19,7 +19,7 @@ namespace WebAPI.Data
         {
             return _context.Colegios.Find(id);
         }
-        public Colegio? Insert(Colegio colegio)
+        public Colegio Insert(Colegio colegio)
         {
             _context.Colegios.Add(colegio);
             _context.SaveChanges();

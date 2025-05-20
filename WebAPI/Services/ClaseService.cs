@@ -24,7 +24,7 @@ namespace WebAPI.Services
         public Clase? Insert(ClaseInsertDTO clase)
         {
             var claseAInsertar = new Clase();
-            claseAInsertar.Id = clase.Id;
+            //claseAInsertar.Id = clase.Id;
             claseAInsertar.Name = clase.Name;
             claseAInsertar.ColegioId = clase.ColegioId;
             claseAInsertar.ProfesorId = clase.ProfesorId;

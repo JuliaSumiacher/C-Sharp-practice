@@ -11,8 +11,8 @@ namespace WebAPI.Models
         public string? Name { get; set; }
         public int? ProfesorId { get; set; }
         public int? ColegioId { get; set; }    
-        public Colegio Colegio { get; set; } = null!;
-        public Profesor Profesor { get; set; } = null!;
+        public Colegio Colegio { get; set; }
+        public Profesor Profesor { get; set; }
 
     }
 }

@@ -23,7 +23,7 @@ namespace WebAPI.Services
         public Colegio? Insert(ColegioInsertDTO colegio)
         {
             var colegioAInsertar = new Colegio();
-            colegioAInsertar.Id = colegio.Id;
+            //colegioAInsertar.Id = colegio.Id;
             colegioAInsertar.Name = colegio.Name;
             var colegioInserter = _colegioRepositorio.Insert(colegioAInsertar);
             return colegioInserter;

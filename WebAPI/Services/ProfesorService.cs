@@ -23,7 +23,7 @@ namespace WebAPI.Services
         public Profesor? Insert(ProfesorInsertDTO profesor)
         {
             var profesorAInsertar = new Profesor();
-            profesorAInsertar.Id = profesor.Id;
+            //profesorAInsertar.Id = profesor.Id;
             profesorAInsertar.Name = profesor.Name;
             var profesorInserter = _profesorRepositorio.Insert(profesorAInsertar);
             return profesorInserter;
